@@ -1,0 +1,36 @@
+{
+  "@graph" : [ {
+    "@id" : "http://geo.schema.org/",
+    "rdf:type" : {
+      "@id" : "owl:Ontology"
+    },
+    "rdfs:comment" : "This is the proposed extension schema to capture geo information in schema.org",
+    "owl:versionInfo" : "Created for SDOW testbed @Geonovum"
+  }, {
+    "@id" : "sgeo:source",
+    "rdf:type" : {
+      "@id" : "rdf:Property"
+    }
+  }, {
+    "@id" : "sgeo:type",
+    "rdf:type" : {
+      "@id" : "rdf:Property"
+    }
+  } ],
+  "@context" : {
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment",
+      "@type" : "@id"
+    },
+    "schema" : "http://schema.org/",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "sgeo" : "http://geo.schema.org/",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  }
+}
