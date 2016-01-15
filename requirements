@@ -1,2 +1,5 @@
 This is a placeholder for requirements for the spatial extension.
 
+In principle, every schema:Thing might have a location.
+A location has attributes, such as a shape, the coordinate system and the coordinates.
+
