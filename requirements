@@ -20,6 +20,8 @@ The topological properties are ObjectProperties.
 
 The hasLocation property has an inverse property (isLocationOf)
 
+Although not particularly belonging to the "spatial scope" we also need general attributes that describe the "dublin core" kind of properties, such as "source", "created" etc. 
+This must be at the schema:Thing level.
 
 
 
