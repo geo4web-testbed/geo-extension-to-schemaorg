@@ -1,18 +1,26 @@
-This is a placeholder for requirements for the spatial extension.
+This is a placeholder for requirements and design directions for the spatial extension.
 
-In principle, every schema:Thing is capable of having a hasLocation property. For some classes this might be illogical, but we leave it up to the modeller to decide (AAA principle).
-A location has attributes, such as a shape, a coordinate reference system and coordinates.
-The shape of a location can be point, line or polygon (maybe in the future, if necessary, derivatives thereof)
+The schema.org spatial extension must be self explanatory and not overly complex. We assume that the storage and indexing mechanisms for schema.org data do not have capabilities that facilitate spatial analyses (such as geo functions).
 
-There are additional properties that contain the topology of a location. This topoElogy is annotated, not calculated in the data. Examples: nextTo, above, 
-
-More specific types of a location property, such as jobLocation, will be superseded by hasLocation.
-It is not necessary to say (as it is now):
+There will be one hasLocation property that points to a Location class.   
+More specific types of a location property, such as jobLocation, will be superseded by the general property hasLocation.
+It is not necessary to say (as it is now in schema.org):
 JobPosting jobLocation Place
 One could just as much say:
-JobPosting hasLocation Place
+JobPosting hasLocation Location
+
+In principle, every schema:Thing is capable of having a hasLocation property that points to a Location class. For some classes this might be illogical to have a location, but we leave it up to the modeller to decide (AAA principle).
+A Location has attributes, such as a shape, a coordinate reference system and coordinates.
+The shape of a location can be point, line or polygon (maybe in the future, if necessary, derivatives thereof).
+
+The attributes of Location are mostly DatatypeProperties that point to literals, or coded lists of type string.
+
+There are additional properties that contain the topology of a location. This topology is annotated, not calculated in the data. These topology attributes are different from the common geospatial topology properties (such as overlap, disjoint, meet) to make them more understandable for the general public. Examples are: nextTo, above, inside.
+The topological properties are ObjectProperties.
 
 The hasLocation property has an inverse property (isLocationOf)
+
+
 
 
 
