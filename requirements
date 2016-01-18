@@ -1,5 +1,18 @@
 This is a placeholder for requirements for the spatial extension.
 
-In principle, every schema:Thing might have a location.
-A location has attributes, such as a shape, the coordinate system and the coordinates.
+In principle, every schema:Thing is capable of having a hasLocation property. For some classes this might be illogical, but we leave it up to the modeller to decide (AAA principle).
+A location has attributes, such as a shape, a coordinate reference system and coordinates.
+The shape of a location can be point, line or polygon (maybe in the future, if necessary, derivatives thereof)
+
+There are additional properties that contain the topology of a location. This topoElogy is annotated, not calculated in the data. Examples: nextTo, above, 
+
+More specific types of a location property, such as jobLocation, will be superseded by hasLocation.
+It is not necessary to say (as it is now):
+JobPosting jobLocation Place
+One could just as much say:
+JobPosting hasLocation Place
+
+The hasLocation property has an inverse property (isLocationOf)
+
+
 
