@@ -1,4 +1,5 @@
-This is a placeholder for requirements and design directions for the spatial extension.
+This is a placeholder for requirements and design directions for the spatial extension. This writing is from scratch, and not so much 
+aiming to comment on existing schema.org spatial constructions.
 
 The schema.org spatial extension must be self explanatory and not overly complex. We assume that the storage and indexing mechanisms for schema.org data do not have capabilities that facilitate spatial analyses (such as geo functions).
 
