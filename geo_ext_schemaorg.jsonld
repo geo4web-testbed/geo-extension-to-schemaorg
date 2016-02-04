@@ -1,28 +1,70 @@
 {
-  "@graph" : [ {
+  "@graph" : [  {
     "@id" : "http://geo.schema.org/",
-    "rdf:type" : {
-      "@id" : "owl:Ontology"
-    },
+    "@type" : "owl:Ontology",
     "rdfs:comment" : "This is the proposed extension schema to capture geo information in schema.org",
+    "imports" : "http://topbraid.org/schema/",
     "owl:versionInfo" : "Created for SDOW testbed @Geonovum"
   }, {
-    "@id" : "sgeo:source",
-    "rdf:type" : {
-      "@id" : "rdf:Property"
-    }
+    "@id" : "sgeo:Location",
+    "@type" : "owl:Class",
+    "rdfs:comment" : "Any Thing can have a location.",
+    "rdfs:label" : "Location",
+    "subClassOf" : "schema:Thing"
   }, {
-    "@id" : "sgeo:type",
-    "rdf:type" : {
-      "@id" : "rdf:Property"
+    "@id" : "sgeo:above",
+    "@type" : "rdf:Property",
+    "rdfs:comment" : "This is a topological feature of a location.",
+    "domain" : "sgeo:Location",
+    "rdfs:label" : "above",
+    "range" : "sgeo:Location"
+  }, {
+    "@id" : "sgeo:coordinates",
+    "@type" : "rdf:Property",
+    "rdfs:comment" : "Assumed here is the WKT format.",
+    "domain" : "sgeo:Location",
+    "rdfs:label" : "coordinates",
+    "range" : "xsd:string"
+  }, {
+    "@id" : "sgeo:hasLocation",
+    "@type" : "rdf:Property",
+    "domain" : "schema:Thing",
+    "rdfs:label" : "location",
+    "range" : "sgeo:Location"
+  }, {
+    "@id" : "sgeo:inside",
+    "@type" : "rdf:Property",
+    "rdfs:comment" : "This is a topological feature of a location.",
+    "domain" : "sgeo:Location",
+    "rdfs:label" : "inside",
+    "range" : "sgeo:Location"
+  }, {
+    "@id" : "sgeo:nextTo",
+    "@type" : "rdf:Property",
+    "rdfs:comment" : "This is a topological feature of a location.",
+    "domain" : "sgeo:Location",
+    "rdfs:label" : "next to",
+    "range" : "sgeo:Location"
+  }, {
+    "@id" : "sgeo:shape",
+    "@type" : "rdf:Property",
+    "rdfs:comment" : "This has no geometric meaning, just a textual clarification of the shape to be expected.",
+    "domain" : "sgeo:Location",
+    "rdfs:label" : "shape",
+    "range" : "_:t4"
+  } ,
+  {
+    "@id" : "_:t4",
+    "@type" : "rdfs:Datatype",
+	"rdfs:comment" : "This is a blank node construct necessary to declare the values of the shape. ",
+    "owl:oneOf" : {
+      "@list" : [ "Point", "Line", "Polygon" ]
     }
-  } ],
+  }],
   "@context" : {
     "schema" : "http://schema.org/",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
-    "sgeo" : "http://geo.schema.org/",
-    "xsd" : "http://www.w3.org/2001/XMLSchema#",
-    "owl" : "http://www.w3.org/2002/07/owl#",
-    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	"xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "sgeo" : "http://geo.schema.org/"
   }
 }
