@@ -7,7 +7,7 @@
     "owl:versionInfo" : "Created for SDOW testbed @Geonovum"
   }, {
     "@id" : "sgeo:Location",
-    "@type" : "owl:Class",
+    "@type" : "rdfs:Class",
     "rdfs:comment" : "Any Thing can have a location.",
     "rdfs:label" : "Location",
     "subClassOf" : "schema:Thing"
