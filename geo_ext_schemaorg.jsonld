@@ -1,14 +1,12 @@
 {
   "@graph" : [  {
     "@id" : "http://geo.schema.org/",
-    "@type" : "owl:Ontology",
-    "rdfs:comment" : "This is the proposed extension schema to capture geo information in schema.org",
-    "imports" : "http://topbraid.org/schema/",
-    "owl:versionInfo" : "Created for SDOW testbed @Geonovum"
+    "@type" : "rdfs:Resource",
+    "rdfs:comment" : "This is the proposed extension schema to capture geo information in schema.org. This is a result of the Testbed Spatial Data on the Web by Geonovum, The Netherlands",
   }, {
     "@id" : "sgeo:Location",
     "@type" : "rdfs:Class",
-    "rdfs:comment" : "Any Thing can have a location.",
+    "rdfs:comment" : "Any schema:Thing can have a location.",
     "rdfs:label" : "Location",
     "subClassOf" : "schema:Thing"
   }, {
@@ -51,15 +49,9 @@
     "rdfs:comment" : "This has no geometric meaning, just a textual clarification of the shape to be expected.",
     "domain" : "sgeo:Location",
     "rdfs:label" : "shape",
-    "range" : "_:t4"
+    "range" : "{"Point", "Line", "Polygon"}
   } ,
-  {
-    "@id" : "_:t4",
-    "@type" : "rdfs:Datatype",
-	"rdfs:comment" : "This is a blank node construct necessary to declare the values of the shape. ",
-    "owl:oneOf" : {
-      "@list" : [ "Point", "Line", "Polygon" ]
-    }
+ 
   }],
   "@context" : {
     "schema" : "http://schema.org/",
