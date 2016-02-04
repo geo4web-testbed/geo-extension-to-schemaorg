@@ -2,7 +2,7 @@
   "@graph" : [  {
     "@id" : "http://geo.schema.org/",
     "@type" : "rdfs:Resource",
-    "rdfs:comment" : "This is the proposed extension schema to capture geo information in schema.org. This is a result of the Testbed Spatial Data on the Web by Geonovum, The Netherlands",
+    "rdfs:comment" : "This is the proposed extension schema to capture geo information in schema.org. This is a result of the Testbed Spatial Data on the Web by Geonovum, The Netherlands"
   }, {
     "@id" : "sgeo:Location",
     "@type" : "rdfs:Class",
@@ -49,10 +49,10 @@
     "rdfs:comment" : "This has no geometric meaning, just a textual clarification of the shape to be expected.",
     "domain" : "sgeo:Location",
     "rdfs:label" : "shape",
-    "range" : "{"Point", "Line", "Polygon"}
-  } ,
+    "range" : ["Point", "Line", "Polygon"]
+  } 
  
-  }],
+  ],
   "@context" : {
     "schema" : "http://schema.org/",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
