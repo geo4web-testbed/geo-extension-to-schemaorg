@@ -10,7 +10,7 @@ One could just as much say:
 JobPosting hasLocation Location
 
 In principle, every schema:Thing is capable of having a hasLocation property that points to a Location class. For some classes this might be illogical to have a location, but we leave it up to the modeller to decide (AAA principle).
-A Location has attributes, such as a shape, a coordinate reference system and coordinates.
+A Location has attributes, such as a shape, a coordinate reference system (or maybe just assume WGS84?) and coordinates.
 The shape of a location can be point, line or polygon (maybe in the future, if necessary, derivatives thereof).
 
 The attributes of Location are mostly DatatypeProperties that point to literals, or coded lists of type string.
