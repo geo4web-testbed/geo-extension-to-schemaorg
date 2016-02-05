@@ -24,7 +24,7 @@
     "rdfs:label" : "coordinates",
     "range" : "xsd:string"
   }, {
-    "@id" : "sgeo:hasLocation",
+    "@id" : "sgeo:location",
     "@type" : "rdf:Property",
     "domain" : "schema:Thing",
     "rdfs:label" : "location",
