@@ -7,7 +7,7 @@ More specific types of a location property, such as jobLocation, will be superse
 It is not necessary to say (as it is now in schema.org):
 JobPosting jobLocation Place
 One could just as much say:
-JobPosting hasLocation Location
+JobPosting hasLocation Location 
 
 In principle, every schema:Thing is capable of having a hasLocation property that points to a Location class. For some classes this might be illogical to have a location, but we leave it up to the modeller to decide (AAA principle).
 A Location has attributes, such as a shape, a coordinate reference system (or maybe just assume WGS84?) and coordinates.
