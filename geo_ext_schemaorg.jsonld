@@ -19,7 +19,7 @@
   }, {
     "@id" : "sgeo:coordinates",
     "@type" : "rdf:Property",
-    "rdfs:comment" : "Assumed here is the WKT format.",
+    "rdfs:comment" : "Assumed here is the WKT format and WGS84 CRS.",
     "rdfs:domain" : "sgeo:Location",
     "rdfs:label" : "coordinates",
     "rdfs:range" : "xsd:string"

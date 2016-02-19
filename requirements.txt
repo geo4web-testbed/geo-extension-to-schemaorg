@@ -13,10 +13,9 @@ In principle, every schema:Thing is capable of having a hasLocation property tha
 A Location has attributes, such as a shape, a coordinate reference system (or maybe just assume WGS84?) and coordinates.
 The shape of a location can be point, line or polygon (maybe in the future, if necessary, derivatives thereof).
 
-The attributes of Location are mostly DatatypeProperties that point to literals, or coded lists of type string.
+The attributes of Location are mostly rdf:Properties that point to literals, or coded lists of type string.
 
 There are additional properties that contain the topology of a location. This topology is annotated, not calculated in the data. These topology attributes are different from the common geospatial topology properties (such as overlap, disjoint, meet) to make them more understandable for the general public. Examples are: nextTo, above, inside.
-The topological properties are ObjectProperties.
 
 The hasLocation property has an inverse property (isLocationOf)
 
