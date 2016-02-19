@@ -8,48 +8,69 @@
     "@type" : "rdfs:Class",
     "rdfs:comment" : "Any schema:Thing can have a location.",
     "rdfs:label" : "Location",
-    "subClassOf" : "schema:Thing"
+    "rdfs:subClassOf" : "schema:Thing"
   }, {
     "@id" : "sgeo:above",
     "@type" : "rdf:Property",
     "rdfs:comment" : "This is a topological feature of a location.",
-    "domain" : "sgeo:Location",
+    "rdfs:domain" : "sgeo:Location",
     "rdfs:label" : "above",
-    "range" : "sgeo:Location"
+    "rdfs:range" : "sgeo:Location"
   }, {
     "@id" : "sgeo:coordinates",
     "@type" : "rdf:Property",
     "rdfs:comment" : "Assumed here is the WKT format.",
-    "domain" : "sgeo:Location",
+    "rdfs:domain" : "sgeo:Location",
     "rdfs:label" : "coordinates",
-    "range" : "xsd:string"
+    "rdfs:range" : "xsd:string"
   }, {
-    "@id" : "sgeo:location",
+    "@id" : "sgeo:hasLocation",
     "@type" : "rdf:Property",
-    "domain" : "schema:Thing",
+    "rdfs:domain" : "schema:Thing",
     "rdfs:label" : "location",
-    "range" : "sgeo:Location"
-  }, {
+	"rdfs:comment" : "Using hasLocation to set apart from schema:location",
+	"schema:inverseOf" : "sgeo:isLocationOf" ,
+    "rdfs:range" : "sgeo:Location"
+  }, 
+   {
+    "@id" : "sgeo:isLocationOf",
+    "@type" : "rdf:Property",
+    "rdfs:domain" : "schema:Thing",
+	"rdfs:comment" : "the inverse of hasLocation",
+	"schema:inverseOf" : "sgeo:hasLocation" ,
+    "rdfs:label" : "location",
+	"rdfs:range" : "sgeo:Location"
+  },
+  {
     "@id" : "sgeo:inside",
     "@type" : "rdf:Property",
     "rdfs:comment" : "This is a topological feature of a location.",
-    "domain" : "sgeo:Location",
+    "rdfs:domain" : "sgeo:Location",
     "rdfs:label" : "inside",
-    "range" : "sgeo:Location"
+    "rdfs:range" : "sgeo:Location"
   }, {
     "@id" : "sgeo:nextTo",
     "@type" : "rdf:Property",
     "rdfs:comment" : "This is a topological feature of a location.",
-    "domain" : "sgeo:Location",
+    "rdfs:domain" : "sgeo:Location",
     "rdfs:label" : "next to",
-    "range" : "sgeo:Location"
-  }, {
+    "rdfs:range" : "sgeo:Location"
+  }, 
+   {
+    "@id" : "sgeo:above",
+    "@type" : "rdf:Property",
+    "rdfs:comment" : "This is a topological feature of a location.",
+    "rdfs:domain" : "sgeo:Location",
+    "rdfs:label" : "above",
+    "rdfs:range" : "sgeo:Location"
+  },
+  {
     "@id" : "sgeo:shape",
     "@type" : "rdf:Property",
     "rdfs:comment" : "This has no geometric meaning, just a textual clarification of the shape to be expected.",
-    "domain" : "sgeo:Location",
+    "rdfs:domain" : "sgeo:Location",
     "rdfs:label" : "shape",
-    "range" : ["Point", "Line", "Polygon"]
+    "rdfs:range" : ["Point", "Line", "Polygon"]
   } 
  
   ],
